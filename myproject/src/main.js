@@ -1,15 +1,30 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
-import router from './router'
+import App from './App.vue'
+import VueRouter from 'vue-router'
 
-Vue.config.productionTip = false
+// Import vue-awesome components
+import RouterNav from 'vue-router-nav'
+import VueGoodTable from 'vue-good-table'
 
-/* eslint-disable no-new */
+import News from './components/News.vue'
+import About from './components/About.vue'
+import Events from './components/Events.vue'
+
+Vue.use(VueRouter)
+Vue.use(RouterNav)
+Vue.use(VueGoodTable)
+
+const router = new VueRouter({
+  mode: 'history',
+  routes: [
+    {path: '/news', name: 'News', component: News},
+    {path: '/about', name: 'About', component: About},
+    {path: '/evnets', name: 'Events', component: Events}
+  ]
+})
+
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  render: h => h(App)
 })
