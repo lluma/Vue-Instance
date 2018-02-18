@@ -1,12 +1,11 @@
 <template>
-  <div class="">
-    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Events</h3>
-  </div>
+  <h4>Sign Up</h4>
 </template>
+
 <script>
 export default {
-
 }
 </script>
+
 <style>
 </style>

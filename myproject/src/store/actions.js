@@ -1,5 +1,13 @@
 import * as types from './mutation-types'
 
-export const createNews = ({commit}, news_payload) => {
-  commit(types.CREATE_NEWS, news_payload)
+export const setNews = ({commit}, newsPayload) => {
+  commit(types.SET_NEWS, newsPayload)
+}
+
+export const signIn = ({commit}, userPayload) => {
+  commit(types.SIGN_IN, userPayload)
+}
+
+export const signOut = ({commit}) => {
+  commit(types.SIGN_OUT)
 }

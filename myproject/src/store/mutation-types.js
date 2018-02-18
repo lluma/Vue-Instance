@@ -1,1 +1,3 @@
-export const CREATE_NEWS = 'CREATE_NEWS'
+export const SET_NEWS = 'SET_NEWS'
+export const SIGN_IN = 'SIGN_IN'
+export const SIGN_OUT = 'SIGN_OUT'
